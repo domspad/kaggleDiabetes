@@ -1,0 +1,41 @@
+About the data:
+
+	90 GB
+	36,000 training examples
+	36,000 test
+	each image ~1.5 GB 
+
+	for processing purposes need training set ~100MB
+		so without processing --> 450X smaller
+
+	distribution of training labels (0=healthy,1,2,3,4=retinopathy!)
+		0 	25810
+		1 	2443
+		2 	5292	<--- weird more 2's than 1's
+		3 	873
+		4 	708
+	
+		i.e. skewed classes ... only roughly 4% images have score 3 or 4 
+		and even class '2' seems hard to judge as having blotches
+
+
+Goal 1: Preprocessing -- how small can we get the photos while still retaining necessary blotches?
+
+	greyscale (~2X smaller)
+	shrink 
+	crop 
+	industry techniques?
+	
+
+Goal 2: Preprocessing -- what is best format for the images to be fed into machine learning algorithms?
+
+	centering
+	flipping left/right to be same side
+	
+Questions:
+	
+	where do the blotches show up?
+	what are the most salient features to distinguish between the classes
+	
+
+	
