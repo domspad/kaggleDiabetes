@@ -1,0 +1,48 @@
+A peak at the different classes of the data
+
+	- wide variety in quality and color and size of images
+	- surprisingly difficult to distinguish even between 0 and 4 classes by hand!
+
+	-descriptions of different levels of classes and examples
+
+	level 0 (healthy)
+		crisp images 
+			164_right
+			19520_left
+		glares
+			29055_right
+			32459_right
+		off-centered
+			27708_left
+		light lines
+			36222_left
+		dark spot
+			33699_left
+		white splotch
+			13817_right
+		splotches
+			16749_left
+
+	level 4 (rampant disease)
+		splotchiness
+			217_right
+			43199_right
+		dark clouds
+			13222_left
+		not always splotchy
+			40917_left
+
+Looking at training set image sizes and compression
+
+	median size :		1.16 MB
+	median pixel height : 	2592
+	median pixel width :	3888
+
+	* the file "trainLabels_withsize.csv" has these measurements for each training example. 
+
+	- tried just shrinking the (pixel) sizes of these images (in Mac Preview application) to see what compression was possible that way. After playing with some examples that had the "splotches" we'd want to preserve in the images, I think even 320 X 240 pixels OR 640 X 480 pixels still preserves the main features of these images, which shrinks the files to around 10 - 60 KB in size (almost a factor of 100 from the median original size!) 
+
+	if we can get 30KB images and want to keep the training set no bigger than 300MB we can use 10,000 images!
+
+	
+
